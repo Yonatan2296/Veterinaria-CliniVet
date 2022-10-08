@@ -1,0 +1,49 @@
+
+.container-all {
+
+	
+
+}
+
+img{
+
+	max-width: 100%;
+}
+
+.container-all{
+
+	position: relative;
+	max-width:  1500px;
+	width: 100%;
+	border-radius: 6px;
+	overflow: hidden;
+
+	
+}
+
+.container-all .contenedor h2{
+
+display: flex;
+justify-content: center;
+
+ position: absolute;
+	top:2%;
+	left: 2%;
+	transform: translateX(30%) translateY(30%);
+color:#fff;
+	
+}
+
+
+.container-all .contenedor p{
+
+display: flex;
+justify-content: center;
+
+ position: absolute;
+	
+	left: 2%;
+	transform: translateX(49%) translateY(22%);
+color:#fff;
+	
+}

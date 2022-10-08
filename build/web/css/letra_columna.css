@@ -1,0 +1,62 @@
+
+
+/*DAR  LETRA TAMAÑO TIPO  Y FUSTIFICADO Y LETRA COLOR  Y 
+
+ BORDER DE COLOR Y  GRUESOR DE BORDER A LAS FOTOS   3 FOTOS*/
+
+h4 {
+
+	/*
+Tipo de letra (fuente)
+
+Propiedad	Descripción	Valores
+font	propiedad compuesta	[ [ font-style || font-variant || font-weight ]? font-size [ / line-height ]? font-family ] | caption | icon | menu | message-box | small-caption | status-bar
+font-family	tipo de letra (fuente)	[ nombre-fuente | familia-genérica ] [, nombre-fuente | familia-genérica ]*
+font-size	tamaño	tamaño-absoluto | tamaño-relativo | distancia | porcentaje
+font-weight	grosor del trazo (negrita)	normal | bold | bolder | lighter | 100 | 200 | 300 | 400 | 500 | 600 | 700 | 800 | 900 */
+   font-weight: bold;
+
+ 
+    text-align:center;
+    color: #1F7AE8;
+
+ 
+}
+
+p{
+
+
+/*font-family	tipo de letra (fuente)	[ nombre-fuente | familia-genérica ] [, nombre-fuente | familia-genérica ]*
+font-size	tamaño	tamaño-absoluto | tamaño-relativo | distancia | porcentaje*/
+ 
+   font-family: sans-serif;
+    font-size: 12px;
+    
+
+    text-align: justify;
+
+    color: #575B60;
+
+
+}
+
+.content-item2 img{
+
+/*BORDER GRUESOR   Y COLOR */
+
+border: 7px solid #09aaf0;
+
+}
+
+  
+
+
+
+
+ 
+
+
+
+
+
+

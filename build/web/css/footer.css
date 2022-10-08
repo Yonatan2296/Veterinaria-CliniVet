@@ -1,0 +1,222 @@
+*{
+
+/*{ apertura inicio  y   cierra la pertura final }*/
+
+    /*Margen exterior*/
+
+    /*  margin  cuatro márgenes exterior simultáneamente    [ auto | distancia | porcentaje ] {1, 4}    */
+    /* padding  cuatro márgenes interiores simultáneamente  [ distancia | porcentaje ] {1, 4}  */
+    /*  font-family tipo de letra (fuente)  [ nombre-fuente | familia-genérica ] [, nombre-fuente | familia-genérica ]*    */
+
+    margin: 0px;
+    padding: 0px;
+
+     /*  box-sizing: border-box El ancho de un elemento se altera si se le aplica un borde o un padding. Eso es porque la anchura del elemento que tu especificas , por defecto no incluye*/
+
+    box-sizing: border-box;
+
+
+    font-family: sans-serif;
+}
+
+/* Propiedad  -------   y su ---------- Valores */
+
+
+
+/* footer en la marca. Un gran uso que puedes darle al footer es que sirva como un espacio para colocar información adicional sobre tu marca , servicio, productos .*/
+footer{
+
+    /* width anchura   valor  auto | distancia | porcentaje*/
+    width: 100%;
+
+
+/*background    darle  color blanco AL TITULO*/
+
+    background: #030A3E;
+    color: white;   
+    
+}
+
+.container-footer-all{
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    padding: 40px;
+}
+
+.container-body{
+    display: flex;
+    justify-content: space-between;
+}
+
+.colum1{
+
+  /*max-width   anchura máxima  distancia | porcentaje */
+
+    max-width: 400px;
+}
+
+.colum1 h1{
+    font-size: 22px;
+}
+
+.colum1 p{
+
+        /*font-size tamaño FUENTE  tamaño-absoluto | tamaño-relativo | distancia | porcentaje*/
+
+    font-size: 14px;
+
+    /*color letra  */
+    color: #C7C7C7;
+
+    /*margin-top    margen exterior superior  valores  ->   auto | distancia | porcentaje*/
+    margin-top: 20px;
+}
+
+.colum2{
+
+      /*max-width   anchura máxima  distancia | porcentaje */
+
+    max-width: 400px;
+    
+}
+
+.colum2 h1{
+
+        /*font-size tamaño FUENTE  tamaño-absoluto | tamaño-relativo | distancia | porcentaje*/
+    font-size: 22px;
+}
+
+.row{
+    margin-top: 20px;
+    display: flex;
+}
+
+.row img{
+    width: 36px;
+    height: 36px;
+}
+
+/*      <label>Av Simon 10 Breña TC</label>  DARLE COLOR BLANCO LO LABEL */
+.row label{
+    margin-top: 10px;
+    margin-left: 20px;
+    color: #C7C7C7;
+}
+
+.colum3{
+    max-width: 400px;
+}
+
+.colum3 h1{
+
+    /*font-size tamaño FUENTE  tamaño-absoluto | tamaño-relativo | distancia | porcentaje*/
+    font-size: 22px;
+}
+
+.row2{
+    margin-top: 20px;
+    display: flex;
+}
+
+.row2 img{
+    width: 36px;
+    height: 36px;
+}
+
+.row2 label{
+    margin-top: 10px;
+    margin-left: 20px;
+    max-width: 140px;
+}
+
+.container-footer{
+    width: 100%;  
+    background: #01072C;
+}
+
+.footer{
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;  
+    padding: 20px;
+}
+
+.copyright{
+    color: #C7C7C7;
+}
+
+.copyright a{
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+.information a{
+    text-decoration: none;
+    color: #C7C7C7;
+}
+
+
+@media screen and (max-width: 1100px){
+    
+    .container-body{
+        flex-wrap: wrap;
+    }
+    
+    .colum1{
+        max-width: 100%;
+    }
+    
+    .colum2,
+    .colum3{
+        margin-top: 40px;
+    }
+}
+
+
+
+/* colores al iconos redes sociales */
+
+
+
+
+
+
+.icon-facebook:before{
+    
+    color:blue;
+
+    font-size: 30px;
+
+}
+
+
+.icon-youtube:before{
+    
+    color:red;
+
+    font-size: 30px;
+
+}
+
+
+.icon-twitter:before{
+    
+    color:aqua;
+
+    font-size: 30px;
+
+}
+
+
+.icon-whatsapp:before{
+    
+    color:#00FF00;
+
+    font-size: 30px;
+
+}
+
+

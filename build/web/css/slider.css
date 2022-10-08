@@ -1,0 +1,260 @@
+
+
+img{
+
+
+
+/*{ apertura inicio  y   cierra la pertura final }*/
+
+/* Propiedad  -------	y su ----------	Valores */
+
+/*anchura máxima	distancia | porcentaje*/
+
+	max-width: 100%;
+}
+
+.container-all{
+/*El valor relative en el atributo position*/
+	position: relative;
+	max-width:  1500px;
+
+	/*width especifica la anchura del area de contenido de un elemento.*/
+	width: 100%;
+
+
+/* border-top-right-radius(3)	esquina superior derecha redondeada	distancia | porcentaje */
+
+
+/* border-radius(3)	esquinas redondeadas	[ distancia | porcentaje ] {1, 4} */
+	border-radius: 6px;
+
+	/* overflow	si el contenido desborda al elemento	auto | hidden | scroll | visible */
+
+	overflow: hidden;
+}
+
+.slide{
+
+	/* position	modo de posicionamiento	absolute | fixed | relative | static */
+
+position: relative;
+
+	display: flex;
+
+	/*  La function de CSS translate() recoloca un elemento en el eje horizontal y/o vertical. Su resultado es de tipo */
+	transform: translate3d(0,0,0);
+	transition: all 600ms;
+	/*   especifica una lista de animaciones que se deben aplicar al elemento seleccionado.  */
+
+	/*   AUTOPLAY  SIRVE PARA DARLE ANIMACION   EL CODIGO ESTA ABAJO @keyframes autoplay */
+	animation-name:autoplay;
+
+	/*  Animation-duration indica la cantidad de tiempo que la animación tarda en completar un ciclo (duración). El valor por defecto es 0s */
+	animation-duration: 6.5s;
+
+	/* animation-direction indica si la animación debe retroceder hasta el fotograma de inicio al finalizar la secuencia o si debe comenzar desde el principio al llegar al final */
+
+	animation-direction: alternate;
+
+	/* animation-fill-mode especifica el modo en que una animación  aplica sus estilos, estableciendo su persistencia y estado final tras su ejecución. */
+	animation-fill-mode: forwards;
+
+	/*  animation-iteration-count define el numero de veces que un ciclo de animación debe ser ejecutado antes de detenerse  */
+	animation-iteration-count:  infinite;
+}
+   
+.item-slide{
+
+	position: relative;
+	display: flex;
+	/*  es una propiedad resumida que indica la capacidad de un elemento flexible para alterar sus dimensiones*/
+	flex-direction: column;
+	flex-shrink: 0;
+	flex-grow: 0;
+   max-width: 100%;
+
+
+
+
+}
+
+
+
+
+.pagination{
+
+	position: absolute;
+	bottom: 20px;
+	left: 0;
+	display: flex;
+     flex-wrap: wrap;
+     align-items: center;
+     justify-content: center;
+     width: 100%;
+
+
+}
+
+.pagination-item{
+
+
+	display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 2px solid white;
+    width: 16px;
+    height: 16px;
+    border-radius: 4px;
+    overflow: hidden;
+
+    /* cursor (puntero del ratón) mediante la propiedad cursor . El cursor tomará la forma indicada en la propiedad al pasar por encima del elemento. */
+    
+    cursor: pointer;
+    background: rgba(255,255,255, 0.5);
+    margin: 0 10px;
+    text-align: center;
+    transition: all 300ms;
+
+
+   
+}
+
+/* :hover	cuando el ratón pasa sobre el elemento	 */
+
+.pagination-item:hover{
+
+	/* scale() define una transformación que modifica el tamaño de un elemento en el plano 2D*/
+
+	transform: scale(2);
+}
+
+.pagination-item img{
+
+	
+  
+
+}
+
+ .pagination-item:hover img{
+
+ 	opacity: 1;
+ 	transform: scale(1);
+ }
+
+input[id="1"]:checked ~ .slide{
+
+	animation: none;
+	transform: translate3d(0, 0, 0);
+}
+
+
+input[id="1"]:checked ~  .pagination .pagination-item[for="1"]{
+
+
+/*background	darle color al checked segun el cuadrado  ejemplo dar color blanco fondo cuadrado */
+	background: #fff;
+
+	
+
+}
+
+input[id="2"]:checked ~ .slide{
+
+	animation: none;
+	transform: translate3d(calc(-100% * 1), 0, 0);
+}
+
+
+input[id="2"]:checked ~  .pagination .pagination-item[for="2"]{
+	
+/*background	darle color al checked segun el cuadrado  ejemplo dar color blanco fondo cuadrado */
+
+	background: #fff;
+
+	
+
+}
+
+input[id="3"]:checked ~ .slide{
+
+	animation: none;
+	transform: translate3d(calc(-100% * 2), 0, 0);
+}
+
+
+input[id="3"]:checked ~  .pagination .pagination-item[for="3"]{
+
+
+/*background	darle color al checked segun el cuadrado  ejemplo dar color blanco fondo cuadrado */
+	background: #fff;
+
+	
+
+}
+
+
+/*     COMIENSO  DEL  SLIDER DEL MOVIMIENTO ANIMACION  */
+
+/* keyframes  permite construir animaciones, autoplay solo se da la animacion y esto se logra aplicando una transición de un elemento */
+
+@keyframes autoplay{
+
+	33%{
+
+		/* transform: coloca un elemento en el eje horizontal y/o vertical */
+
+/* puede cambiar el tamaño  -100% a otro numeros probando */
+
+
+		transform: translate3d(calc(-100% * 0), 0,0);
+	}
+
+66%{
+
+		transform: translate3d(calc(-100% * 1), 0,0);
+	}
+
+	100%{
+
+		transform: translate3d(calc(-100% * 2), 0,0);
+	}
+
+}
+
+/*     FIN DE SLIDER DEL MOVIMIENTO ANIMACION  */
+
+
+/*     PARA LA LETRA  ESTA DE COLOR BLANCO LO QUE ESTA ENCIMA DE LA FOTOS IMAGENES DEL SLIDER */
+
+.contenedor {
+
+/*position	modo de posicionamiento ->	absolute | fixed | relative | sta */
+
+	position: absolute;
+
+	/* top	posición del borde superior del elemento	auto | distancia | porcentaje
+right	posición del borde derecho del elemento	auto | distancia | porcentaje
+bottom	posición del borde inferior del elemento	auto | distancia | porcentaje
+left	posición del borde izquierdo del elemento	auto | distancia | porcentaje */
+
+	top:2%;
+	left: 9%;
+
+		/* transform: coloca un elemento en el eje horizontal y/o vertical */
+
+	transform: translateX(30%) translateY(30%);
+
+	/* DAR DE COLOR AMARILLO AL TITULO DE LA LETRA   */
+
+color:#ff1;
+}
+
+/* DAR DE COLOR BLANCO AL PARRAFO    */
+.contenedor p{
+
+	
+color:#fff;
+}
+
+
+

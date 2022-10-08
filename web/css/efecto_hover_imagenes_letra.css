@@ -1,0 +1,112 @@
+
+/*                                */
+
+figure{
+
+position: relative;
+/*      altura                          */
+height: 203px;
+/*       ancho                         */
+width: 300px;
+/*    para ocultar la dimensiones                            */
+overflow: hidden;
+/*       border   ovalado puede cambiar numero                      */
+border-radius: 15px;
+
+/*     puntero pasa en la imagen sale manito                           */
+
+cursor:pointer;
+
+
+
+
+}
+/*                                */
+
+
+figure .capa{
+/*                                */
+position: absolute;
+/*     cero el contenido superior al pie margen imagen                           */
+top:0;
+/*      dimension ancho                          */
+	width: 100%;
+	/*        altto dimension                        */
+	height: 100%;
+	/*    darle color  efecto   transparente                          */
+	background: rgba(11,103,123,0.6);
+	/*   ocapacidad de cero  se bora suave                             */
+	transition: all 500ms ease-out;
+	/*            visible                    */
+opacity: 0;
+visibility: hidden;
+
+
+
+
+}
+/*    hover mayor a capa                            */
+
+figure:hover >.capa{
+/*    al pasar mouse se va mostrar opactity  vale 1                            */
+
+opacity: 1;
+/*         visible muestra                       */
+visibility: visible;
+
+
+}
+
+/*      titulo                          */
+
+figure:hover >.capa h3{
+
+/*                                */
+margin-top: 70px;
+/*          empuje el parrafo abajo                      */
+margin-bottom: 15px;
+
+
+
+}
+
+/*    estilo al titulo color                            */
+
+figure .capa h3{
+/*      color al titulo                          */
+color:#fff;
+/*          se desminuya en negrita                      */
+font-weight: 300;
+/*         margen                       */
+margin-bottom: 120px;
+/*         transion en efecto letra                       */
+transition: all 500ms ease-out;
+margin-top: 30px;
+
+
+}
+
+/*                                */
+
+figure .capa p{
+/*      color blanco letra parrafo                          */
+color:#fff;
+/*         letra                         */
+font-size: 12px;
+/*   para separa la linea de parrafo la letra                             */
+line-height: 1.5;
+/*         alto                       */
+width: 100%;
+/*           ancho                     */
+max-width: 220px;
+/*  centrado bien titulo y parrafo                              */
+margin:auto;
+}
+
+/*         la imagen se aleja al pasar el mouse                    */
+figure:hover > img{
+
+
+	transform: scale(1.3);
+
+}

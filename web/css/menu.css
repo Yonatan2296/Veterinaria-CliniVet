@@ -1,0 +1,184 @@
+*{
+
+
+
+/*{ apertura inicio  y   cierra la pertura final }*/
+
+/* Propiedad  ------- y su ---------- Valores */
+
+
+
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+font-family: arial;
+
+
+}
+
+
+header{
+
+width: 100%;
+height: 60px;
+background: #000080;
+position: fixed;
+z-index: 100;
+
+
+}
+
+.img-logo{
+
+width: 60px;
+margin-left: 10%;
+padding: 10px;
+
+
+
+}
+
+.menu{
+
+	width: auto;
+	float: right;
+    margin-top: 18px;
+
+    margin-right: 10%;
+
+	
+}
+
+.menu ul{
+
+	display: flex;
+
+}
+
+
+.menu li{
+
+	list-style: none;
+}
+
+.menu li a{
+	
+	padding: 10px;
+     text-decoration: none;
+     color:white;
+     font-size: 14px;
+     font-weight:  bold;
+    
+    color: #b7b7b;
+}
+
+
+
+#check{
+
+
+
+	display:none;
+}
+
+.icon-menu{
+
+	display: none;
+
+}
+
+#check:checked ~ .menu{
+
+	height: 200px;
+
+}
+
+
+
+@media screen  and (max-width:900px) {
+    .icon-menu{
+
+	display: block;
+	color: white;
+   float: right;
+
+   padding: 5px;
+   font-size: 20px;
+   border: 1px solid #7a7a7a;
+   border-radius: 5px;
+
+ margin-top: 11px;
+ margin-right: 16px;
+
+  }
+
+/*hover se utiliza para seleccionar y dar estilo al pasar con el ratón por encima de un elemento*/
+.icon-menu:hover{
+
+	background: #ffa500;
+
+  /*cursor  tipo de cursor  [uri,]* | auto | crosshair | default | help | move | pointer |*/
+	cursor: pointer;
+
+}
+
+
+ .menu{
+
+  /**  
+
+ PROPIEDAD    -  CONCEPTO   Y   VALORES 
+
+border-collapse modo de bordes  collapse | separate
+border-spacing  separación entre celdas distancia distancia?
+caption-side  posición de la leyenda  top | bottom | left(-) | right(-)
+empty-cells borde de casillas vacías  hide | show
+table-layout  algoritmo ancho de tabla  auto | fixed
+
+
+display tipo de caja  none | block | compact(-) | inline | inline-block(+) | inline-table | list-item | marker(-) | run-in | table | table-caption | table-cell | table-column | table-column-group | table-footer-group | table-header-group | table-row | table-row-group | flex(3) | inline-flex(3)
+box-sizing(3) posición del borde y márgenes border-box | content-box
+width anchura auto | distancia | porcentaje
+min-width anchura mínima  distancia | porcentaje
+max-width anchura máxima  distancia | porcentaje
+height  altura  auto | distancia | porcentaje
+min-height  altura mínima distancia | porcentaje
+max-height  anchura máxima  distancia | porcentaje
+overflow  si el contenido desborda al elemento  auto | hidden | scroll | visible
+
+*/
+
+
+  float: left;
+  margin-top: 0px;
+ 
+   width: 100%;
+   height: 0px;
+   overflow: hidden;
+   /*  background propiedad compuesta background-attachment || background-color || background-image || background-position || background-repeat */
+   background: #ffa500;
+    transition:  all 300ms;
+
+ }
+
+
+.menu ul{
+
+/* flex-direction(3)  dirección row || row-reverse || column || column-reverse*/
+	flex-direction: column;
+
+   
+}
+
+
+.menu  li a{
+
+/*especifica si un elemento es tratado como block or inline element y el diseño */
+display: block;
+
+}
+
+
+
+
+}
