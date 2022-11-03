@@ -163,9 +163,9 @@ if(request.getAttribute("cargo")!=null){
 
 <h3> Accede a tu cuenta &#128272 </h3>
 
-<input value="pepe" type="text" placeholder="&#128272; Usuario"   class="form-control" name="txtusuario">
+<input value="Administrador" type="text" placeholder="&#128272; Usuario"   class="form-control" name="txtusuario">
 			<br>
-			<input type="password" placeholder="&#128272;  Contraseña" class="form-control"   name="txtcontra">
+                        <input value="123" type="password" placeholder="&#128272;  Contraseña" class="form-control"   name="txtcontra">
 
 			<br>
 

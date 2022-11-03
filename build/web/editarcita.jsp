@@ -1,13 +1,14 @@
 
 
+
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 
 
 <%@page session="true" %>
 
-<%@page import="Modelo.Cliente"%>
+<%@page import="Modelo.Cita"%>
 <%@page import="java.lang.String"%>
-<%@page import="Modelo.ClienteDAO"%>
+<%@page import="Modelo.CitaDAO"%>
 
 <%
     HttpSession sesion = request.getSession();
@@ -20,7 +21,7 @@
 
         String cargo = sesion.getAttribute("cargo").toString();
 
-        if (!cargo.equals("1") && !cargo.equals("2")) {
+    if (!cargo.equals("1") && !cargo.equals("2")) {
 
             response.sendRedirect("Login.jsp");
 
@@ -264,18 +265,17 @@
                     </div>
                 </nav>
             </header>
-            <%@include file="includes/Navegacion.jsp" %>
-
-            <!-- formularioss -->
+                   <%@include file="includes/Navegacion.jsp" %>
 
 
 
 
-            <%        ClienteDAO dao = new ClienteDAO();
+
+            <%        CitaDAO dao = new CitaDAO();
 
                 int id = Integer.parseInt((String) request.getAttribute("idper"));
 
-                Cliente p = dao.enviar(id);
+                Cita p = dao.enviar(id);
 
 
             %>
@@ -286,9 +286,16 @@
 
 
 
-            <form action="ControladorCliente">
+
+            <!-- formularioss -->
 
 
+
+
+
+
+
+            <form action="ControladorCita">
 
                 <div class="content-wrapper">
 
@@ -310,25 +317,21 @@
 
                                         <!-- dividir ventana -->
 
-
-
-
                                         <div class="form-group">
                                             <label for="exampleInputEmail1">Codigo</label>
-                                            <input type="text" class="form-control"  placeholder="Ingrese Codigo"   name="txtcodigo" value="<%= p.getId()%>">
+                                            <input type="text" class="form-control"  placeholder="Ingrese Codigo"   name="txtcodigo" value="<%= p.getCodmascota()%>">
                                         </div>
-
-                                        <div class="form-group">
-                                            <label for="exampleInputEmail1">N° Dni</label>
-                                            <input type="text" class="form-control"  placeholder="Ingrese N° Cedula/Dni"   name="txtdni" value="<%= p.getDni()%>">
-                                        </div>
-
 
 
                                         <div class="form-group">
-                                            <label for="exampleInputEmail1">Cliente</label>
-                                            <input type="text" class="form-control"  placeholder="Ingrese Nombre"  name="txtnombres"  value="<%= p.getNom()%>">
+                                            <label for="exampleInputEmail1">Mascota</label>
+                                            <input type="text" class="form-control"  placeholder="Ingrese Nombre"  name="txtnombres"  value="<%= p.getMascota()%>">
                                         </div>
+
+
+
+
+
 
 
 
@@ -357,38 +360,43 @@
                                             <!-- dividir ventana -->
 
 
-
-
                                             <div class="form-group">
-                                                <label for="exampleInputEmail1">Direccion</label>
-                                                <input type="text" class="form-control"  placeholder="Ingrese Email"  name="txtdireccion"  value="<%= p.getDireccion()%>">
-                                            </div>
-
-                                            <div class="form-group">
-                                                <label for="exampleInputEmail1">Email</label>
-                                                <input type="text" class="form-control"  placeholder="Ingrese Email"  name="txtemail"  value="<%= p.getEmail()%>">
+                                                <label for="exampleInputEmail1">Hora</label>
+                                                <input type="text" REQUIRED name="txthora"  class="form-control"  placeholder="">
                                             </div>
 
 
 
 
+
+
                                             <div class="form-group">
+                                                <label>Estado</label>
+                                                <select  id="cboestado" name="cboestado"  class="form-control" style="width: 100%;">
 
-                                                <!-- dividir ventana -->
-
-                                                <div class="form-group">
-                                                    <label for="exampleInputEmail1">Telefono </label>
-                                                    <input type="text" class="form-control"  placeholder="Ingrese Telefono"  name="txttelefono" value="<%= p.getTel()%>">
-                                                </div>
+                                                    <option value="Pendiente">Pendiente</option>
 
 
 
 
 
-                                                <!-- /.form group -->
+                                                </select>
+                                            </div>
+
+
+
+
+
+
+                                            <div class="form-group">
+                                                <label for="exampleInputEmail1">Fecha</label>
+                                                <input type="date" REQUIRED name="txtfecha"  class="form-control">
+
+
 
 
                                             </div>
+
 
 
 
@@ -403,15 +411,12 @@
 
                             <div class="box-footer">
 
+                                <input class="btn btn-success"  type="submit" name="accion"   value="Guardar"> 
 
 
+                                <A HREF="agregar_tratamiento.jsp"  class="btn btn-warning">Listado</A>  </button>
 
 
-                                <input class="btn btn-primary" type="submit" name="accion" value="Actualizar"> 
-
-
-
-                                <a href="ControladorCliente?accion=listar" class="btn btn-warning" >Listado</a>
 
 
                             </div>
@@ -742,8 +747,3 @@
 </script>
 </body>
 </html>
-
-
-
-
-

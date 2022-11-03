@@ -289,7 +289,7 @@
 
                                         <div class="form-group">
                                             <label for="exampleInputEmail1">Cliente</label>
-                                            <input type="text"   class="form-control"  placeholder="Ingrese Nombres" name="txtnombres">
+                                            <input type="text"   class="form-control"  placeholder="Ingrese Nombre y Apellidos" name="txtnombres">
                                         </div>
 
 
@@ -324,8 +324,8 @@
 
 
                                             <div class="form-group">
-                                                <label for="exampleInputEmail1">Direccion </label>
-                                                <input type="text"  class="form-control"  placeholder="Ingrese Direccion"  name="txtdireccion">
+                                                <label for="exampleInputEmail1">Dirección </label>
+                                                <input type="text"  class="form-control"  placeholder="Ingrese Dirección"  name="txtdireccion">
                                             </div>
 
                                             <div class="form-group">
@@ -334,8 +334,8 @@
 
 
                                                 <div class="form-group">
-                                                    <label for="exampleInputEmail1">Telefono</label>
-                                                    <input type="text"   class="form-control"  placeholder="Ingrese Telefono" name="txttelefono" maxlength="9">
+                                                    <label for="exampleInputEmail1">Teléfono</label>
+                                                    <input type="text"   class="form-control"  placeholder="Ingrese Teléfono" name="txttelefono" maxlength="9">
                                                 </div>
 
 

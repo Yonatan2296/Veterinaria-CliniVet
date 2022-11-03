@@ -12,6 +12,10 @@
         <servlet-name>ControladorMascota</servlet-name>
         <servlet-class>Controlador.ControladorMascota</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>ControladorCita</servlet-name>
+        <servlet-class>Controlador.ControladorCita</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>ControladorUsuario</servlet-name>
         <url-pattern>/ControladorUsuario</url-pattern>
@@ -23,6 +27,10 @@
     <servlet-mapping>
         <servlet-name>ControladorMascota</servlet-name>
         <url-pattern>/ControladorMascota</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ControladorCita</servlet-name>
+        <url-pattern>/ControladorCita</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

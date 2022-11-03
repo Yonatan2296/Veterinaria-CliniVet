@@ -12,7 +12,7 @@ public class Conexion {
 
             Class.forName("com.mysql.jdbc.Driver");
 
-            con = DriverManager.getConnection("jdbc:mysql://localhost:3306/veterinaria", "root", "");
+            con = DriverManager.getConnection("jdbc:mysql://localhost:3308/veterinaria", "root", "");
 
             System.out.println("OK");
         } catch (Exception e) {
