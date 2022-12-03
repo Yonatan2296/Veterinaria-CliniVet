@@ -16,6 +16,34 @@
         <servlet-name>ControladorCita</servlet-name>
         <servlet-class>Controlador.ControladorCita</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>ControladorVeterinario</servlet-name>
+        <servlet-class>Controlador.ControladorVeterinario</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ControladorTipo_Tratamiento</servlet-name>
+        <servlet-class>Controlador.ControladorTipo_Tratamiento</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ControladorHistorial</servlet-name>
+        <servlet-class>Controlador.ControladorHistorial</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>Controlador_Consulta_Tratamiento</servlet-name>
+        <servlet-class>Controlador.Controlador_Consulta_Tratamiento</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ControladorCitaReporte</servlet-name>
+        <servlet-class>Controlador.ControladorCitaReporte</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ControladorTratamientoReporte</servlet-name>
+        <servlet-class>Controlador.ControladorTratamientoReporte</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ControladorUsuariosReporte</servlet-name>
+        <servlet-class>Controlador.ControladorUsuariosReporte</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>ControladorUsuario</servlet-name>
         <url-pattern>/ControladorUsuario</url-pattern>
@@ -31,6 +59,34 @@
     <servlet-mapping>
         <servlet-name>ControladorCita</servlet-name>
         <url-pattern>/ControladorCita</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ControladorVeterinario</servlet-name>
+        <url-pattern>/ControladorVeterinario</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ControladorTipo_Tratamiento</servlet-name>
+        <url-pattern>/ControladorTipo_Tratamiento</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ControladorHistorial</servlet-name>
+        <url-pattern>/ControladorHistorial</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Controlador_Consulta_Tratamiento</servlet-name>
+        <url-pattern>/Controlador_Consulta_Tratamiento</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ControladorCitaReporte</servlet-name>
+        <url-pattern>/ControladorCitaReporte</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ControladorTratamientoReporte</servlet-name>
+        <url-pattern>/ControladorTratamientoReporte</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ControladorUsuariosReporte</servlet-name>
+        <url-pattern>/ControladorUsuariosReporte</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

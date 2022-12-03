@@ -1,7 +1,7 @@
 <%@page import="java.util.List"%>
 <%@page import="java.util.Iterator"%>
 <%@page import="Modelo.Historial"%>
-<%@page import="Modelo.HistorialDAO"%>
+<%@page import="Modelo.HistorialConsultaDAO"%>
 
 
 
@@ -234,10 +234,8 @@
                     </div>
                 </nav>
             </header>
+
             <%@include file="includes/Navegacion.jsp" %>
-
-
-
             <!-- formularioss -->
 
 
@@ -245,7 +243,7 @@
 
 
 
-            <form action="ControladorHistorial">
+            <form action="Controlador_Consulta_Tratamiento">
 
                 <div class="content-wrapper">
                     <!-- Content Header (Page header) -->
@@ -255,32 +253,8 @@
                             <div class="col-xs-12">
                                 <div class="box">
                                     <div class="box-header">
-                                        <h3 class="box-title"><center>Listado de Clientes su Mascota  </h3></center>
+                                        <h3 class="box-title"><center>Listado de Historial de Mascotas </h3></center>
 
-                                     <!--
-                                        <div class="box-tools">
-                                            <div class="input-group input-group-sm" style="width: 200px;">
-
-                                                <input type="text" name ="txtbuscar"  class="form-control pull-right" placeholder="Ingrese Cliente" id="busqueda">
-
-                                                <div class="input-group-btn">
-
-
-                                                    <input class="btn btn-success"  type="submit" name="accion"   value="Buscar">  
-
-                                                    </form>
-
-
-                                                    <div class="input-group-btn">
-
-
-
-
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                     -->
                                         <!-- /.box-header -->
                                         <div class="box-body table-responsive no-padding">
 
@@ -293,13 +267,13 @@
                                                     <td><b>Especie</b></td>        
 
 
-                                                    <td><b>Fecha</b></td> 
+                                                    <td><b>Diagnostico</b></td> 
 
-                                                    <td><b>Hora</b></td> 
+                                                    <td><b>Tratamiento</b></td> 
 
-                                                    <td><b>Estado</b></td>        
-
-                                                    <td><b>Cliente</b></td>  
+                                                    <td><b>Receta</b></td>        
+                                                    <td><b>Fecha</b></td>   
+                                                    <td><b>Cliente</b></td>   
 
 
 
@@ -311,7 +285,9 @@
 
 
 
-                                                <%     HistorialDAO dao = new HistorialDAO();
+                                                <%
+
+                                                    HistorialConsultaDAO dao = new HistorialConsultaDAO();
 
                                                     List<Historial> list = dao.listar();
 
@@ -333,24 +309,28 @@
 
 
                                                 <tr>
-                                                    <td class="text-center"><%= per.getCodmascota()%></td>
+                                                    <td class="text-center"><%= per.getId()%></td>
 
-                                                    <td><%= per.getMascota()%></td>
 
+                                                    <td><%= per.getNombremascota()%></td>
                                                     <td><%= per.getEspecie()%></td>
 
+                                                    <td><%= per.getDiagnostico()%></td>
+                                                    <td><%= per.getCodtratamiento()%></td>
+
+                                                    <td><%= per.getReceta()%></td>
                                                     <td><%= per.getFecha()%></td>
-                                                    <td><%= per.getHora()%></td>
-
-                                                    <td><%= per.getEstado()%></td>
-
                                                     <td><%= per.getCliente()%></td>
 
                                                     <td>
-     <a class="btn btn-warning" href="ControladorHistorial?accion=editar&id=1">Enviar</a>
-    
-    
-     <a class="btn btn-danger" href="ControladorCita?accion=eliminar&id=1">Cancelar</a>
+
+
+
+
+
+                                                        <a class="btn btn-danger" href="Controlador_Consulta_Tratamiento?accion=eliminar&id=<%=per.getId()%>">Cancelar</a>
+
+
                                                     </td> 
                                                 </tr>
                                                 <%}%>

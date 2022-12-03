@@ -347,15 +347,10 @@
                                                     <td><%= per.getCliente()%></td>
 
                                                     <td>
-
-
-
-                                                        <a class="btn btn-warning" href="#">Enviar</a>
-
-
-                                                        <a class="btn btn-danger" href="#">Cancelar</a>
-
-
+     <a class="btn btn-warning" href="ControladorHistorial?accion=editar&id=1">Enviar</a>
+    
+    
+     <a class="btn btn-danger" href="ControladorCita?accion=eliminar&id=1">Cancelar</a>
                                                     </td> 
                                                 </tr>
                                                 <%}%>

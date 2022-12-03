@@ -208,9 +208,9 @@ if(request.getAttribute("cargo")!=null){
       out.write("\n");
       out.write("<h3> Accede a tu cuenta &#128272 </h3>\n");
       out.write("\n");
-      out.write("<input value=\"pepe\" type=\"text\" placeholder=\"&#128272; Usuario\"   class=\"form-control\" name=\"txtusuario\">\n");
+      out.write("<input value=\"Administrador\" type=\"text\" placeholder=\"&#128272; Usuario\"   class=\"form-control\" name=\"txtusuario\">\n");
       out.write("\t\t\t<br>\n");
-      out.write("\t\t\t<input type=\"password\" placeholder=\"&#128272;  Contraseña\" class=\"form-control\"   name=\"txtcontra\">\n");
+      out.write("                        <input value=\"123\" type=\"password\" placeholder=\"&#128272;  Contraseña\" class=\"form-control\"   name=\"txtcontra\">\n");
       out.write("\n");
       out.write("\t\t\t<br>\n");
       out.write("\n");

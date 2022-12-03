@@ -54,7 +54,20 @@
 
 
             </li>
+            <li class="treeview">
+                <a href="#">
+                    <i class="fa fa-laptop"></i>
+                    <span>Veterinario</span>
+                    <span class="pull-right-container">
+                        <i class="fa fa-angle-left pull-right"></i>
+                    </span>
+                </a>
+                <ul class="treeview-menu">
+                    <li><a href="agregar_veterinario.jsp"><i class="fa fa-circle-o"></i> Registrar Veterinario</a></li>
 
+
+                </ul>
+            </li>
 
             <li class="treeview">
                 <a href="#">
@@ -141,12 +154,55 @@
 
                 </ul>
             </li>
-            <li>
 
-                </span>
+            <li class="treeview">
+                <a href="#">
+                    <i class="fa fa-edit"></i> <span>Tratamiento</span>
+                    <span class="pull-right-container">
+                        <i class="fa fa-angle-left pull-right"></i>
+                    </span>
                 </a>
+                <ul class="treeview-menu">
+                    <li><a href="agregar_tratamiento.jsp"><i class="fa fa-circle-o"></i> Registrar Tratamiento</a></li>
+                    <li><a href="agregar_tipo.jsp"><i class="fa fa-circle-o"></i> Registrar Tipo </a></li>
+
+                </ul>
             </li>
 
+
+            <li class="treeview">
+                <a href="#">
+                    <i class="fa fa-edit"></i> <span>Consulta</span>
+                    <span class="pull-right-container">
+                        <i class="fa fa-angle-left pull-right"></i>
+                    </span>
+                </a>
+                <ul class="treeview-menu">
+
+                    <li><a href="listado_historial.jsp"><i class="fa fa-circle-o"></i> Consulta Historial</a></li>
+
+
+                </ul>
+            </li>
+
+            <li class="treeview">
+                <a href="#">
+                    <i class="fa fa-book"></i> <span>Reportes</span>
+                    <span class="pull-right-container">
+                        <i class="fa fa-angle-left pull-right"></i>
+                    </span>
+                </a>
+                <ul class="treeview-menu">
+
+
+                    <li><a href="reporte_cita.jsp"><i class="fa fa-circle-o"></i> Reporte de Cita</a>
+                    <li><a href="reporte_tratamiento.jsp"><i class="fa fa-circle-o"></i> Reporte de Tratamiento</a>
+
+                    <li><a href="reporte_usuario.jsp"><i class="fa fa-circle-o"></i> Reporte de Usuario</a></li>
+
+
+                </ul>
+            </li>
 
 
             <li class="treeview">
