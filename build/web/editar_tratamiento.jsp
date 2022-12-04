@@ -1,5 +1,6 @@
 
 
+<%@page import="Modelo.HistorialConsultaDAO"%>
 <%@page import="java.util.ArrayList"%>
 <%@page import="Modelo.Mascota"%>
 <%@page import="Modelo.MascotaDAO"%>
@@ -15,11 +16,6 @@
 <%@page import="Modelo.HistorialDAO"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 
-
-
-
-
-
 <html>
     <head>
         <meta charset="utf-8">
@@ -34,12 +30,11 @@
             <%@include file="includes/Header.jsp" %>
             <%@include file="includes/Navegacion.jsp" %>
 
-            <%                HistorialDAO dao = new HistorialDAO();
+            <%                             HistorialConsultaDAO dao = new HistorialConsultaDAO();
 
-                int id = Integer.parseInt((String) request.getAttribute("idper"));
+                int id = Integer.parseInt(request.getParameter("id"));
 
-                Historial p = dao.enviar(id);
-
+                Historial p = dao.BuscarPorId(id);
 
             %>
 
@@ -94,14 +89,14 @@
 
                                         <div class="form-group">
                                             <label for="exampleInputEmail1">Diagnostico</label>
-                                            <input type="text"   class="form-control"  placeholder="Ingrese Diagnostico" name="txtdiagnostico">
+                                            <input value="<%=p.getDiagnostico()%>" type="text"   class="form-control"  placeholder="Ingrese Diagnostico" name="txtdiagnostico">
                                         </div>
 
 
 
                                         <div class="form-group">
                                             <label for="exampleInputEmail1">Receta</label>
-                                            <input type="text"   class="form-control"  placeholder="Ingrese Receta" name="txtreceta">
+                                            <input value="<%=p.getReceta()%>" type="text"   class="form-control"  placeholder="Ingrese Receta" name="txtreceta">
                                         </div>
 
 
@@ -137,10 +132,20 @@
                                                     <%
                                                         while (rss.next()) {
 
+                                                            if (rss.getString("cod_tratamiento").equals(p.getCodtratamiento())) {
+                                                    %>
+                                                    <option value="<%=rss.getString("cod_tratamiento")%>" selected=""><%=rss.getString("nombre")%> </option>
+
+                                                    <%
+                                                    } else {
                                                     %>
                                                     <option value="<%=rss.getString("cod_tratamiento")%>"><%=rss.getString("nombre")%> </option>
+
                                                     <%
                                                         }
+
+                                                    %>
+                                                    <%                                                        }
                                                     %>
                                                 </select>
 
@@ -149,7 +154,7 @@
 
                                             <div class="form-group">
                                                 <label for="exampleInputEmail1">Fecha</label>
-                                                <input type="date" REQUIRED name="txtfecha"  class="form-control">
+                                                <input value="<%=p.getFecha()%>" type="date" REQUIRED name="txtfecha"  class="form-control">
                                             </div>
 
 
@@ -186,7 +191,7 @@
                             </div>
 
                             <div class="box-footer">
-
+                                <input type="hidden" name="idHistorial" value="<%=p.getId()%>">
                                 <input class="btn btn-success"  type="submit" name="accion"   value="Guardar"> 
 
                                 <a href="Controlador_Consulta_Tratamiento?accion=listar" class="btn btn-primary" >Listado</a>

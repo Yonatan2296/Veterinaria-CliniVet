@@ -54,6 +54,10 @@
 
 
             </li>
+          <%
+          
+          if (nomCargo.equals("Administrador")) {
+              %>
             <li class="treeview">
                 <a href="#">
                     <i class="fa fa-laptop"></i>
@@ -68,6 +72,9 @@
 
                 </ul>
             </li>
+            <%
+          }
+          %>
 
             <li class="treeview">
                 <a href="#">

@@ -49,6 +49,13 @@ public class Historial {
         this.especie = especie;
     }
 
+    @Override
+    public String toString() {
+        return "Historial{" + "id=" + id + ", codmascota=" + codmascota + ", mascota=" + mascota + ", hora=" + hora + ", estado=" + estado + ", nombremascota=" + nombremascota + ", fechanacimiento=" + fechanacimiento + ", peso=" + peso + ", sexo=" + sexo + ", diagnostico=" + diagnostico + ", codtratamiento=" + codtratamiento + ", cliente=" + cliente + ", receta=" + receta + ", codigo=" + codigo + ", fecha=" + fecha + ", especie=" + especie + '}';
+    }
+
+    
+    
     public int getId() {
         return id;
     }

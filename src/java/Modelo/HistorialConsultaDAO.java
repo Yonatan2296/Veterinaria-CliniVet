@@ -134,4 +134,50 @@ public class HistorialConsultaDAO {
 
     }
 
+    public Historial BuscarPorId(int id) {
+        Historial per = null;
+
+        String sql = "SELECT  historial.cod_historial,historial.cod_mascota,historial.cod_tratamiento,  mascota.mascota, mascota.especie, historial.diagnostico, tipo_tratamiento.nombre, historial.receta, historial.fecha,  cliente.nombres\n"
+                + "FROM  historial INNER JOIN\n"
+                + "   mascota ON historial.cod_mascota = mascota.cod_mascota INNER JOIN\n"
+                + "   cliente ON mascota.cod_cliente = cliente.cod_cliente INNER JOIN\n"
+                + "   tipo_tratamiento ON historial.cod_tratamiento = tipo_tratamiento.cod_tratamiento"
+                + " where historial.cod_historial =?";
+
+        try {
+            con = cn.getConnection();
+            ps = con.prepareStatement(sql);
+            ps.setInt(1, id);
+            rs = ps.executeQuery();
+
+            if (rs.next()) {
+
+                per = new Historial();
+
+                per.setId(rs.getInt("cod_historial"));
+                per.setCodmascota(rs.getString("cod_mascota"));
+                
+
+                per.setNombremascota(rs.getString("mascota"));
+
+                per.setEspecie(rs.getString("especie"));
+
+                per.setDiagnostico(rs.getString("diagnostico"));
+ per.setCodtratamiento(rs.getString("cod_tratamiento"));
+                per.setReceta(rs.getString("receta"));
+
+                per.setFecha(rs.getString("fecha"));
+
+                per.setCliente(rs.getString("nombres"));
+
+            }
+
+        } catch (Exception e) {
+
+        }
+
+        return per;
+
+    }
+
 }
